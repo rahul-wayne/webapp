@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  nagios:
+    image: webapp:1.0
+    user: "0"
+    environment: 
+      - PUID=0
+      - PGID=0
+    container_name: webapp
+    restart: unless-stopped
+    ports: 
+      - 8082:80
+
+    command: ["httpd", "-D", "FOREGROUND"]
