@@ -13,6 +13,9 @@ COPY index.html /var/www/html
 EXPOSE 80
 
 ADD start.sh /
+
+# Make the script executable
 RUN chmod +x /start.sh
 
+# Start Apache using the script
 CMD ["/start.sh"]
