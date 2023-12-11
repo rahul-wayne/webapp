@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+  namespace: webapp
+  labels:
+    name: webapp-service
+    app: webapp
+  annotations:
+    oci.oraclecloud.com/load-balancer-type: "lb"
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "10"
+
+spec:
+  selector:
+    name: webapp-pod
+    app: webapp
+  type: LoadBalancer  # Change the type to LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
