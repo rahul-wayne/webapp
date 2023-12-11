@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  namespace: webapp
+  labels:
+    name: webapp-deployment
+    app: webapp
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: webapp-pod
+      app: webapp
+
+  template:
+    metadata:
+      name: webapp-pod
+      labels:
+        name: webapp-pod
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: blackpearl001/webapp
+          ports:
+            - containerPort: 80
