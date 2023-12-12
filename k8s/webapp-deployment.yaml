@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: blackpearl001/webapp
+          image: blackpearl001/webapp:v1
           ports:
             - containerPort: 80
 ...
