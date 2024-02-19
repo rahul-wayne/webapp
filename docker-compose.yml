@@ -12,3 +12,4 @@ services:
       - 8082:80
 
     command: ["httpd", "-D", "FOREGROUND"]
+    
