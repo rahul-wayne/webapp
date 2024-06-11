@@ -4,8 +4,7 @@
 
 trigger:
 - main
-pool:
-  default
+pool: Default
 
 resources:
 - repo: self
