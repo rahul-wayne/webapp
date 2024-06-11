@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'xxdockerimage1060a89e-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'dev'
 
 
 stages:
