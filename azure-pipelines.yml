@@ -5,7 +5,7 @@
 trigger:
 - main
 pool:
-  name: dev
+  name: default
 
 resources:
 - repo: self
