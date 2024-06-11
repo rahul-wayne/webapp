@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rahulwaynewebapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rahulwaynewebapp
+  template:
+    metadata:
+      labels:
+        app: rahulwaynewebapp 
+    spec:
+      containers:
+        - name: rahulwaynewebapp 
+          image: xxdockerimage.azurecr.io/rahulwaynewebapp
+          ports:
+          - containerPort: 80
